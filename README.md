@@ -44,7 +44,7 @@ or
 
 ## Running the native application
 
-To run the demo using docker, invoke the following:
+To run the demo, execute the following:
 
 ```sh
 target/springdoc-openapi-spring-boot-2-webflux
