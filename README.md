@@ -33,7 +33,7 @@ java -jar build/libs/springdoc-openapi-spring-boot-2-webflux-3.1.6-SNAPSHOT.jar
 To create a `native image`, execute the following command
 
 ```sh
-mvn -Pnative
+mvn package -Pnative
 ```
 
 or
