@@ -1,6 +1,4 @@
-# Springdoc OpenAPI Using GraalVM Native Image
-
-## Building application
+# Using OpenAPI 3 with GraalVM Native Image
 
 ### Pre-requisites
 - GraalVM 22.2.0 / JDK 11
