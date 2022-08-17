@@ -59,7 +59,7 @@ build/native/nativeCompile/springdoc-openapi-spring-boot-2-webflux
 ## Start the Swagger UI
 
 ```sh
-docker run -p 80:8080 swaggerapi/swagger-ui
+docker run --rm -p 80:8080 swaggerapi/swagger-ui
 ```
 
 Open the Swagger UI by browsing to http://localhost:8082/
