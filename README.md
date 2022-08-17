@@ -20,13 +20,13 @@ or
 ## Running the JAR application
 
 ```sh
-java -jar target/springdoc-openapi-spring-boot-2-webflux-3.1.6-SNAPSHOT.jar
+java -jar target/springdoc-openapi-demo-3.1.6-SNAPSHOT-spring-boot.jar
 ```
 
 or
 
 ```sh
-java -jar build/libs/springdoc-openapi-spring-boot-2-webflux-3.1.6-SNAPSHOT.jar
+java -jar build/libs/springdoc-openapi-demo-3.1.6-SNAPSHOT.jar
 ```
 
 ### Building native image with GraalVM
@@ -47,13 +47,13 @@ or
 To run the demo, execute the following:
 
 ```sh
-target/springdoc-openapi-spring-boot-2-webflux
+target/springdoc-openapi-demo
 ```
 
 or
 
 ```sh
-build/native/nativeCompile/springdoc-openapi-spring-boot-2-webflux
+build/native/nativeCompile/springdoc-openapi-demo
 ```
 
 ## Start the Swagger UI
