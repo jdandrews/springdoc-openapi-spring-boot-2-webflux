@@ -1,32 +1,47 @@
-# springdoc-openapi demo with spring-boot-2 web-flux
+# Springdoc OpenAPI Using GraalVM Native Image
 
 ## Building application
 
 ### Pre-requisites
-- JDK 8+
-- maven 3
-- docker CLI
+- GraalVM 22.2.0 / JDK 11
+- Swagger UI
 
-### Option 1: Building Executable JAR
-To create an `executable jar`, simply run:
+### Building Executable JAR
+To create an executable jar, execute:
 
 ```sh
  mvn clean package
 ```
 
-### Option 2: Building a non-native OCI Images
-To create a non-native OCI docker image, simply run:
+or
 
 ```sh
-mvn clean spring-boot:build-image
+./gradlew clean build
 ```
 
-### Option 3: Building native image with GraalVM
-To create a `native image`, the project rely on spring-native project and buildpacks.
-Run the following command
+## Running the JAR application
 
 ```sh
-mvn -Pnative-image clean spring-boot:build-image
+java -jar target/springdoc-openapi-spring-boot-2-webflux-3.1.6-SNAPSHOT.jar
+```
+
+or
+
+```sh
+java -jar build/libs/springdoc-openapi-spring-boot-2-webflux-3.1.6-SNAPSHOT.jar
+```
+
+### Building native image with GraalVM
+To create a `native image`, execute the following command
+
+```sh
+mvn -Pnative
+```
+
+or
+
+```sh
+./gradlew nativeCompile
 ```
 
 ## Running the native application
@@ -34,5 +49,13 @@ mvn -Pnative-image clean spring-boot:build-image
 To run the demo using docker, invoke the following:
 
 ```sh
-docker run --rm -p 8080:8082 springdoc-openapi-spring-boot-2-webflux:3.1.6-SNAPSHOT
+target/springdoc-openapi-spring-boot-2-webflux
 ```
+
+or
+
+```sh
+build/native/nativeCompile/springdoc-openapi-spring-boot-2-webflux
+```
+
+Open the Swagger UI by browsing to http://localhost:8082/
