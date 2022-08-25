@@ -1,0 +1,12 @@
+# eclipse
+/.settings
+/.project
+/.classpath
+/bin
+
+# gradle
+/.gradle
+/build
+
+# vim
+*.swp

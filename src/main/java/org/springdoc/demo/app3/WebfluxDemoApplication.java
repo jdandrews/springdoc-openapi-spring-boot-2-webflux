@@ -35,7 +35,7 @@ public class WebfluxDemoApplication {
 
 	@Bean
 	public GroupedOpenApi tweetsOpenApi(@Value("${springdoc.version}") String appVersion) {
-		String[] paths = { "/tweets/**" };
+		String[] paths = { "/tweets/**", "/status" };
 		return GroupedOpenApi.builder().
 				group("tweets")
 				.addOpenApiCustomiser(openApi -> openApi.info(new Info().title("Tweets API").version(appVersion)))
